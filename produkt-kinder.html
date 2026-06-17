@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Crunch - Kinder Edition</title>
+    <link class="placeholder" rel="stylesheet" href="style.css?v=1.2">
+    <link class="placeholder" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-top">
+            <div class="top-left">
+                <a href="#" class="active-pill">Privatkunden</a>
+                <a href="#">Firmenkunden</a>
+                <a href="#">Immobilien</a>
+            </div>
+            <div class="top-right">
+                <a href="#"><i class="fa-solid fa-book-open"></i> Leichte Sprache</a>
+                <a href="#"><i class="fa-solid fa-universal-access"></i> Barrierefreiheit</a>
+            </div>
+        </div>
+        
+        <div class="header-bottom">
+            <a href="index.html" class="logo-wrapper">
+                <img src="Bilder/logo.png" alt="Cash Crunch Logo" class="logo-img">
+                <span class="brand-name">Cash Crunch</span>
+            </a>
+        
+            <nav class="main-nav">
+                <a href="#">Produkte</a>
+                <a href="#">Ratgeber</a>
+                <a href="#">Aktuelles</a>
+                <a href="#">Über uns</a>
+                <a href="#">Karriere</a>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                
+                <a href="#" class="cart-btn-header" aria-label="Warenkorb">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge" id="cart-badge" style="display: none;">0</span>
+                </a>
+            
+                <button class="banking-btn-rounded">
+                    <span>Online-Banking</span> <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
+
+                <button class="burger-menu-btn" id="burgerMenuBtn" aria-label="Menü öffnen">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+            <nav class="mobile-nav-links">
+                <a href="#">Produkte</a>
+                <a href="#">Ratgeber</a>
+                <a href="#">Aktuelles</a>
+                <a href="#">Über uns</a>
+                <a href="#">Karriere</a>
+                
+                <button class="banking-btn-mobile">Online-Banking</button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="video-hero-teaser">
+        <video autoplay muted loop playsinline id="hero-video">
+            <source src="Bilder/Klassisch.mp4" type="video/mp4">
+            Ihr Browser unterstützt das Video-Tag nicht.
+        </video>
+        
+        <button class="video-control-btn" id="video-toggle-btn" aria-label="Video pausieren">
+            <i class="fa-solid fa-pause"></i>
+        </button>
+    </section>
+
+    <main class="content-container">
+      
+        <section class="product-main-info" style="margin-top: 20px;" id="product-selector">
+            
+            <h1 class="product-main-title">Cash Crunch - Kinder Edition</h1>
+
+            <div class="detail-image-box">
+                <button class="carousel-btn prev-btn" aria-label="Vorheriges Bild">&#10094;</button>
+                <button class="carousel-btn next-btn" aria-label="Nächstes Bild">&#10095;</button>
+                
+                <div class="carousel-slides">
+                    <img src="Bilder/Verpackung-Kinder.png" class="carousel-slide active" alt="Cash Crunch Produktansicht 1">
+                    <img src="Bilder/Gebrauch-Kinder.png" class="carousel-slide" alt="Cash Crunch Nährwerte Ansicht 2">
+                </div>
+                
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            <div class="purchase-box">
+                <p class="product-description">
+                    Spielerisch sparen lernen ab dem allerersten Löffel! Unsere Kinder Edition kombiniert ein knuspriges Frühstückserlebnis mit wertvollem Finanz-Wissen. Knackige Vollkorn-Münzen treffen auf fruchtige Zuschuss-Zucker-Linsen. Als besonderes Highlight wartet in jeder Packung ein exklusives Reichtums-Bauspielzeug für clevere Mini-Anleger.
+                </p>
+                
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span style="color:#333; font-size:14px;">(2500)</span>
+                </div>
+
+                <div class="price">
+                    Preis - 3,49€ <span class="price-sub">€9,30/kg</span>
+                </div>
+
+                <div class="buy-actions">
+                    <select class="dropdown-select" onchange="window.location.href=this.value;">
+                        <option value="produkt-klassisch.html">Klassisch (375g)</option>
+                        <option value="produkt-sport.html">Fitness Edition (375g)</option>
+                        <option value="produkt-kinder.html" selected>Kinder Edition (375g)</option>
+                    </select>
+                    <button class="btn-red" id="cart-btn">In den Warenkorb <i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-text-section">
+            <h3>Produktinformationen</h3>
+            <p>
+                Hergestellt nach <strong>höchsten Qualitätsstandards in Deutschland</strong>, garantiert Cash Crunch ein absolut krisensicheres Frühstückserlebnis. Für unsere knusperstarke Rezeptur nutzen wir ausschließlich <strong>sorgfältig geprüftes Vollkorn aus regionalem Anbau</strong> – natürlich komplett ohne versteckte Zusatz-Gebühren. <strong>Sicher verpackt</strong> im frischeversiegelten Geschmackstresor bleibt dein Knusper-Kapital so bis zum letzten Löffel <strong>optimal geschützt</strong>.
+            </p>
+
+            <hr class="section-divider-full">
+
+            <img src="Bilder/Werbung-Kinder.png" alt="Kinder Edition Werbung" class="product-middle-image">
+
+            <h3>Vorteile</h3>
+            <p><strong>Reichtums-Bauspielzeug:</strong> In jeder Packung versteckt sich ein spielerisches Extra, um den Spaß am Vermögensaufbau frühzeitig zu wecken.</p>
+            <p><strong>Fruchtige Zuschuss-Zucker-Linsen:</strong> Ein farbenfroher, fruchtiger Motivations-Bonus, der perfekt mit kalter Milch harmoniert.</p>
+            <p><strong>Konzentrations-Kredit für die Schule:</strong> Dank komplexer Kohlenhydrate bleibt der Energiehaushalt während des Unterrichts stabil im Plus.</p>
+        </section>
+
+        <hr class="section-divider-full">
+
+        <div class="nutri-performance-container">
+            <h2>NUTRI-PERFORMANCE: Ihre Sättigungs-Strategie.</h2>
+            <p class="intro-text">
+                Exklusive Strategie: Starke Nährstoffe, stabile Energie. Cash Crunch Original ist reich an Proteinen und wichtigen Ballaststoffen, bei reduziertem Zucker.
+            </p>
+        
+            <h3>NÄHRSTOFF-RENDITE</h3>
+        
+            <div class="chart-row">
+                <span class="label">Kalorien</span>
+                <div class="bar-wrapper">
+                    <div class="bar" style="width: 36%; background-color: #d32f2f;"></div>
+                    <span class="percent">368 kcal</span>
+                </div>
+                <span class="horizon"></span>
+            </div>
+        
+            <div class="chart-row">
+                <span class="label">Kohlenhydrate</span>
+                <div class="bar-wrapper">
+                    <div class="bar" style="width: 70%; background-color: #d32f2f;"></div>
+                    <span class="percent">70g</span>
+                </div>
+                <span class="horizon">Starker Zuwachs für Ihre Energie</span>
+            </div>
+        
+            <div class="chart-row">
+                <span class="label">Ballaststoffe</span>
+                <div class="bar-wrapper">
+                    <div class="bar" style="width: 8%; background-color: #c09d57;"></div>
+                    <span class="percent">8g</span>
+                </div>
+                <span class="horizon">Anlagehorizont: Langfristig Sättigend</span>
+            </div>
+        
+            <div class="chart-row">
+                <span class="label">Protein</span>
+                <div class="bar-wrapper">
+                    <div class="bar" style="width: 12%; background-color: #d32f2f;"></div>
+                    <span class="percent">12g</span>
+                </div>
+                <span class="horizon">Wachstums-Bausteine perfekt dosiert</span>
+            </div>
+        </div>
+
+        <hr class="section-divider-full">
+
+    </main>
+
+    <div class="final-cta-section">
+        <h2>Überzeugt? Sichere dir jetzt deine Knusper-Rendite!</h2>
+        <p>Investiere in dein Frühstück und starte krisensicher in den Tag.</p>
+        <a href="#product-selector" class="cta-buy-button">Jetzt krisensicher kaufen</a>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+
+            <div class="footer-links-grid">
+                <div class="footer-col">
+                    <h4>Beliebte Themen</h4>
+                    <ul>
+                        <li><a href="#">Girokonto &rarr;</a></li>
+                        <li><a href="#">Kontowechselservice &rarr;</a></li>
+                        <li><a href="#">Privatkredit &rarr;</a></li>
+                        <li><a href="#">Baufinanzierung &rarr;</a></li>
+                        <li><a href="#">Kreditkarte &rarr;</a></li>
+                        <li><a href="#">Wertpapiere &rarr;</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Filialen &rarr;</a></li>
+                        <li><a href="#">Geldautomaten &rarr;</a></li>
+                        <li><a href="#">Rechner &rarr;</a></li>
+                        <li><a href="#">Karte sperren &rarr;</a></li>
+                        <li><a href="#">Finanzglossar &rarr;</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Weitere Portale</h4>
+                    <ul>
+                        <li><a href="#">S-Immobilien &rarr;</a></li>
+                        <li><a href="#">WirWunder &rarr;</a></li>
+                        <li><a href="#">LBS &rarr;</a></li>
+                        <li><a href="#">Deka &rarr;</a></li>
+                        <li><a href="#">Jobbörse &rarr;</a></li>
+                        <li><a href="#">Cockpit Immobilie &rarr;</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Apps der Sparkasse</h4>
+                    <div class="app-buttons">
+                        <a href="#" class="app-btn">
+                            <i class="fa-brands fa-apple"></i>
+                            <span>Laden im App Store</span>
+                        </a>
+                        <a href="#" class="app-btn">
+                            <i class="fa-solid fa-play"></i>
+                            <span>JETZT BEI Google Play</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-links">
+                <a href="#">Datenschutzerklärung</a>
+                <a href="#">Impressum</a>
+                <a href="#">Nutzungshinweise</a>
+                <a href="#">Privatsphäre-Einstellungen</a>
+                <a href="#">Barrierefreiheit</a>
+                <a href="#">Barriere melden</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

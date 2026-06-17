@@ -1,0 +1,1423 @@
+/* ==========================================================================
+   1. GLOBALE RESETS & SCHRIFTARTEN (Cash Crunch Look)
+   ========================================================================== */
+
+   html {
+    scroll-behavior: smooth; /* Aktiviert das flüssige, animierte Scrollen */
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* Verhindert globalen horizontalen Overflow */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.2; 
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION (Absolut unkaputtbar)
+   ========================================================================== */
+.main-header {
+    background-color: #ff0000; 
+    color: #ffffff;
+    width: 100%;
+    display: block;
+    position: relative; /* Basis für absolute Positionierungen */
+}
+
+/* Oberer Header-Streifen */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 13px;
+}
+
+.header-top a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 6px 14px;
+    display: inline-block;
+    font-weight: 410;
+}
+
+.header-top a.active-pill {
+    background-color: #cc0000; 
+    border-radius: 20px; 
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+/* Unterer Header-Bereich */
+.header-bottom {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;      
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 15px 40px; 
+    background-color: #ff0000; 
+    max-width: 1400px;  
+    margin: 0 auto;     
+    width: 100%;
+}
+
+/* Klickbarer Logo-Text-Verbund */
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    gap: 0px; 
+    flex-shrink: 0;                     
+    transition: transform 0.2s ease;
+}
+
+.logo-wrapper:hover {
+    transform: scale(1.02);
+}
+
+.logo-img {
+    height: 60px;
+    width: 60px;          
+    object-fit: contain;  
+    display: block;
+    border-radius: 50%;   
+    background-color: #ffffff; 
+    box-sizing: border-box;
+    padding: 2px;         
+}
+
+/* Der Markenname */
+.brand-name {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    white-space: nowrap;  
+    margin-left: 20px !important; 
+    padding-left: 0 !important;              
+}
+
+/* Hauptnavigation horizontal */
+.main-nav {
+    display: flex;
+    align-items: center; 
+    gap: 25px;
+    flex-wrap: nowrap;                  
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;    
+    font-weight: 410;
+    white-space: nowrap;                
+    transition: opacity 0.2s;
+}
+
+.main-nav a:hover {
+    opacity: 0.8;
+}
+
+/* Rechte Aktions-Box */
+.header-actions {
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+    flex-shrink: 0;                     
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 14px; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Der Online-Banking Button */
+.banking-btn-rounded {
+    background: transparent; 
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 12px 28px;      
+    border-radius: 50px;     
+    cursor: pointer;
+    font-size: 14px;         
+    font-weight: 410;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; 
+    white-space: nowrap;     
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.banking-btn-rounded:hover {
+    background-color: #ffffff;
+    color: #ff0000;
+}
+
+/* Burger-Button (Standardmäßig auf Desktop versteckt) */
+.burger-menu-btn {
+    display: none;
+}
+
+/* Mobiles Overlay standardmäßig im Desktop ausblenden */
+.mobile-menu-overlay {
+    display: none;
+}
+
+/* ==========================================================================
+   3. HERO TEASER & BANNER
+   ========================================================================== */
+.hero-section {
+    background-color: #e6e6e6;
+    height: 750px;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.hero-card {
+    background-color: #ffffff;
+    padding: 30px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.hero-card h1 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.hero-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.btn-red {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background 0.2s;
+}
+
+.btn-red:hover {
+    background-color: #cc0000;
+}
+
+.video-hero-teaser {
+    width: 100%;
+    height: 750px; 
+    background-color: #000000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0; 
+}
+
+.video-hero-teaser video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* ==========================================================================
+   4. INHALTSBEREICH & PRODUKT-GRID
+   ========================================================================== */
+.content-container {
+    padding: 40px 5%;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.content-container h2 {
+    font-size: 22px;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+a.product-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.product-link:hover .product-card {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: #ff0000;
+}
+
+.product-card {
+    background: #ffffff;
+    border: 1px solid #eef2f5;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin: 15px 0 8px 0;
+}
+
+.product-card .description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.product-card h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.product-card ul {
+    list-style-type: none;
+}
+
+.product-card ul li {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 18px;
+}
+
+.product-card ul li::before {
+    content: "•";
+    color: #ff0000; 
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.product-image-placeholder {
+    width: 100%;
+    height: 280px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px; 
+    overflow: hidden;
+}
+
+.product-grid-img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; 
+    filter: drop-shadow(3px 5px 8px rgba(0,0,0,0.15)); 
+    transition: transform 0.2s ease;
+}
+
+a.product-link:hover .product-grid-img {
+    transform: scale(1.04);
+}
+
+/* ==========================================================================
+   5. NEWSLETTER HERO BANNER
+   ========================================================================== */
+.newsletter-hero {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.newsletter-hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.newsletter-hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0.1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+.newsletter-hero-content h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: #ffffff;
+}
+
+.newsletter-hero-content p {
+    font-size: 18px;
+    margin: 0 0 25px 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-subscribe {
+    display: inline-block;
+    background-color: #e30613; 
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 28px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background 0.2s ease-in-out, transform 0.1s ease;
+}
+
+.btn-subscribe:hover {
+    background-color: #b5050f;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   6. DETAILSEITE STYLING & UNIFORMER ZEILENABSTAND
+   ========================================================================== */
+   .detail-container {
+    padding: 40px 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.back-link {
+    color: #ff0000;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* Das Grid ordnet Titel und Kauf-Box sauber in der rechten Spalte an */
+.product-main-info {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-areas: 
+        "image title"
+        "image purchase" !important;
+    gap: 40px !important;
+    align-items: start !important;
+    margin-bottom: 80px !important; 
+    width: 100% !important;
+}
+
+/* Die neue Überschrift wird der oberen rechten Spalte zugewiesen */
+.product-main-title {
+    grid-area: title;
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 0;
+    margin-bottom: -15px; /* Verringert den Abstand zur darunterliegenden Kauf-Box */
+    line-height: 1.2;
+}
+
+/* Das Bild bleibt fest in der linken Spalte verankert */
+.detail-image-box {
+    grid-area: image;
+    position: relative; 
+    background: transparent !important; /* Entfernt die graue Box überall */
+    height: 450px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;                   /* Kein abgerundeter Rahmen mehr nötig */
+    border: none !important;            /* Entfernt die dünne graue Außenlinie */
+    box-shadow: none !important;        /* Entfernt den Schatten der Box */
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Die Kaufbox mit Beschreibungen und Buttons zieht in die untere rechte Spalte */
+.purchase-box {
+    grid-area: purchase;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-slides {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-image-box img.carousel-slide {
+    display: none; 
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; 
+    margin: 0 auto;
+}
+
+.detail-image-box img.carousel-slide.active {
+    display: block; 
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #eaeaea;
+    color: #333333;
+    font-size: 22px;
+    width: 46px;
+    height: 46px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; 
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.carousel-btn:hover {
+    background-color: #ff0000; 
+    color: #ffffff;
+    border-color: #ff0000;
+    transform: translateY(-50%) scale(1.05);
+}
+
+.prev-btn { left: 20px; }
+.next-btn { right: 20px; }
+
+.carousel-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #cccccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.dot:hover {
+    background-color: #999999;
+}
+
+.dot.active {
+    background-color: #ff0000;
+    transform: scale(1.2);
+}
+
+/* Kauf-Box Detail-Stylings */
+.purchase-box .stars { color: #ff0000; font-size: 18px; margin-bottom: 15px; }
+.purchase-box .price { font-size: 22px; font-weight: bold; margin-bottom: 20px; }
+.purchase-box .price-sub { font-size: 12px; color: #666; font-weight: normal; }
+
+.buy-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.dropdown-select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.info-text-section h3 { 
+    font-size: 18px; 
+    margin: 25px 0 10px 0; 
+    border-bottom: 1px solid #ddd; 
+    padding-bottom: 5px; 
+}
+
+.info-text-section p {
+    font-size: 14px;
+    line-height: 1.5 !important;     
+    color: #333; 
+    margin-bottom: 1px !important;   
+}
+
+.info-text-section p:last-child {
+    margin-bottom: 0 !important;
+}
+
+.purchase-box p,
+.info-text-section p { 
+    font-size: 14px; 
+    line-height: 1.5;      
+    color: #333; 
+    margin-bottom: 15px;
+}
+
+.product-middle-image {
+    display: block;
+    margin: 40px auto;
+    width: 100%;          
+    max-width: 1200px;    
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+}
+
+.graphic-section {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.graphic-image-container {
+    width: 100%;
+    background-color: transparent; 
+    padding: 0;                    
+    text-align: center;
+}
+
+.graphic-image-container img {
+    width: 100%;                   
+    max-width: 1200px;             
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;            
+}
+
+/* ==========================================================================
+   6b. NUTRI-PERFORMANCE
+   ========================================================================== */
+.nutri-performance-container {
+    background-color: #161920; 
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 24px 24px; 
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.06); 
+    border-radius: 16px;
+    max-width: 900px;
+    margin: 40px auto;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    width: 100%;
+}
+
+.nutri-performance-container h2 { 
+    color: #ff3333; 
+    font-size: 24px; 
+    margin-bottom: 15px; 
+    letter-spacing: -0.5px;
+}
+
+.nutri-performance-container h3 { 
+    font-size: 18px; 
+    margin-bottom: 25px; 
+    color: #ff3333; 
+}
+
+.nutri-performance-container p { 
+    color: #ffffff !important; 
+    margin-bottom: 30px !important; 
+}
+
+.chart-row { 
+    display: grid; 
+    grid-template-columns: 140px 1fr 280px; 
+    align-items: center; 
+    margin-bottom: 18px; 
+    gap: 20px; 
+    color: #ffffff; 
+    font-size: 14px;
+    width: 100%;
+}
+
+.bar-wrapper { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    background-color: #1f242f; 
+    border-radius: 30px;
+    padding: 4px;
+    width: 100%;
+}
+
+.bar { 
+    height: 22px; 
+    border-radius: 30px; 
+    background: linear-gradient(90deg, #ff1a1a, #cc0000); 
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 0, 0, 0.15);
+}
+
+.chart-row:nth-child(5) .bar { 
+    background: linear-gradient(90deg, #ff1a1a, #cc0000); 
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2), 0 0 10px rgba(212, 163, 115, 0.15);
+}
+
+.chart-row:nth-child(6) .bar { 
+    background: linear-gradient(90deg, #ff1a1a, #cc0000); 
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2), 0 0 10px rgba(76, 175, 80, 0.15);
+}
+
+.percent { 
+    font-family: "SF Mono", Monaco, Consolas, "Liberation Mono", monospace;
+    font-weight: 600; 
+    color: #ffffff; 
+    font-size: 14px;
+    letter-spacing: -0.5px;
+}
+
+.horizon { 
+    font-size: 14px; 
+    color: #ffffff; 
+}
+
+/* ==========================================================================
+   7. FINAL CALL-TO-ACTION SECTION
+   ========================================================================== */
+.final-cta-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #ffffff; 
+    margin-top: 1px;
+    width: 100%;
+}
+
+.final-cta-section h2 {
+    font-size: 24px;
+    color: #111111;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.final-cta-section p {
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 30px;
+}
+
+.cta-buy-button {
+    display: inline-block;
+    background-color: #ff0000 !important; 
+    color: #ffffff !important;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none !important;
+    padding: 15px 40px;
+    border-radius: 4px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cta-buy-button:hover {
+    background-color: #cc0000 !important;
+    transform: translateY(-2px); 
+}
+
+/* ==========================================================================
+   8. PROFI-FOOTER
+   ========================================================================== */
+.main-footer {
+    background-color: #333333; 
+    color: #ffffff;
+    padding: 50px 5% 0 5%;
+    margin-top: 60px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.social-icons {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 22px;
+    transition: opacity 0.2s;
+}
+
+/* Umbau auf Flexbox zur Vermeidung von table-collapse Overflows */
+.footer-links-grid {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+    margin-left: 0;
+}
+
+.footer-col {
+    flex: 1;
+}
+
+.footer-col h4 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+.footer-col ul li {
+    border-bottom: 1px solid #444444; 
+    padding: 10px 0;
+}
+
+.footer-col ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.footer-col ul li a:hover { color: #ff0000; }
+.app-buttons { display: block; }
+.app-btn {
+    background-color: #000000; 
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #444444;
+}
+
+.footer-bottom {
+    background-color: #000000; 
+    margin: 50px -5.6% 0 -5.6%; /* Korrigierter Einzug passend zum neuen Padding */
+    padding: 20px 5.6%;
+}
+
+.footer-bottom-links a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 12px;
+    margin-right: 25px;
+    display: inline-block;
+    line-height: 1.5; 
+}
+
+.cart-btn-header {
+    position: relative;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -7px;
+    right: -10px;
+    background-color: #cc0000; 
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 6px;
+    min-width: 12px;
+    text-align: center;
+    transition: transform 0.15s ease-in-out;
+}
+
+.video-control-btn {
+    position: absolute;
+    bottom: 30px; 
+    right: 30px;  
+    background: rgba(0, 0, 0, 0.5); 
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    z-index: 10; 
+}
+
+.video-control-btn:hover {
+    background-color: #ff0000; 
+    border-color: #ff0000;
+    transform: scale(1.1); 
+}
+
+.footer-col ul {
+    list-style: none; 
+    padding: 0;       
+    margin: 0;
+}
+
+/* ==========================================================================
+   9. GEFIXTE TRENNLINIEN
+   ========================================================================== */
+.section-divider {
+    border: none;
+    height: 1px;
+    background-color: #eaeaea;
+    margin: 40px 0;
+    width: 100%;
+}
+
+.section-divider1 {
+    border: none;
+    height: 1px;
+    background-color: #eaeaea;
+    margin: 5px auto; 
+    width: 80%;
+}
+
+.section-divider2 {
+    border: none;
+    height: 1px;
+    background-color: #eaeaea;
+    margin: 40px auto;
+    width: 100%;
+}
+
+.section-divider-full {
+    border: none;
+    height: 1px;
+    background-color: #eaeaea;
+    margin: 50px 0;                
+    width: 100%;
+}
+
+/* ==========================================================================
+   10. COMPLETE RESPONSIVE FIX (Header, Charts, Kaufbereich & Footer)
+   ========================================================================== */
+@media (max-width: 768px) {
+
+    /* --- 1. GLOBALE ANPASSUNGEN --- */
+    html, body {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .content-container, .detail-container {
+        padding: 20px 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* --- 2. HEADER TOP-BAR --- */
+    .header-top {
+        display: none !important; 
+    }
+
+    /* --- 3. HEADER MAIN-BAR (Radikal aufgeräumt für Mobile) --- */
+    .header-bottom {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 0 15px !important;
+        height: 60px !important; 
+        background-color: #ff0000 !important;
+        position: relative !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .logo-wrapper {
+        display: flex !important;
+        align-items: center !important;
+        flex-shrink: 0 !important;
+    }
+
+    .logo-img {
+        height: 40px !important; 
+        width: 40px !important;
+        border-radius: 50% !important;
+        background-color: #ffffff !important;
+        padding: 2px !important;
+        object-fit: contain !important;
+    }
+
+    /* Blendet den Namen "Cash Crunch" im Header komplett aus */
+    .brand-name {
+        display: none !important;
+    }
+
+    .main-nav {
+        display: none !important;
+    }
+
+    /* Rechte Aktionsbox: Perfekte Abstände für Suche, Warenkorb und Burger-Icon */
+    .header-actions {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 18px !important; 
+        flex-shrink: 0 !important;
+    }
+
+    .search-btn, .cart-btn-header {
+        margin: 0 !important;
+        padding: 5px !important;
+        font-size: 20px !important; 
+        color: #ffffff !important;
+    }
+
+    /* Komplettes Ausblenden des Online-Banking-Buttons im Header */
+    .banking-btn-rounded {
+        display: none !important;
+    }
+
+    .cart-badge {
+        top: -3px !important;
+        right: -6px !important;
+        font-size: 10px !important;
+        padding: 2px 5px !important;
+    }
+
+    /* Burger Menü Button wird rechts bündig fixiert */
+    .burger-menu-btn {
+        display: flex !important; 
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        width: 22px !important;
+        height: 16px !important;
+        background: none !important;
+        border: none !important;
+        cursor: pointer !important;
+        padding: 0 !important;
+        margin-left: 2px !important;
+    }
+
+    .burger-menu-btn span {
+        display: block !important;
+        width: 100% !important;
+        height: 2px !important;
+        background-color: #ffffff !important;
+        border-radius: 2px !important;
+    }
+
+    /* --- 4. NÄHRSTOFF-RENDITE FIX --- */
+    .nutri-performance-container {
+        padding: 30px 15px !important;
+        margin: 30px 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .chart-row, .rendite-row, [class*="chart-row"] {
+        display: flex !important;
+        flex-direction: column !important; 
+        align-items: flex-start !important;
+        width: 100% !important;
+        gap: 6px !important;
+        padding: 12px 0 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+
+    .chart-row > div, .chart-row > span, .chart-cell {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: left !important;
+        margin: 0 !important;
+        white-space: normal !important; 
+    }
+
+    .bar-wrapper {
+        width: 100% !important;
+        margin-top: 4px !important;
+    }
+
+    /* --- 5. HERO TEASER & VIDEO ANPASSUNGEN (Vertikaler Fokus & Zuschnitt) --- */
+    .video-hero-teaser, .hero-section {
+        height: 80vh !important; /* Nimmt mobil eine stattliche Höhe ein */
+        width: 100% !important;
+    }
+
+    .video-hero-teaser video {
+        object-fit: cover !important; /* Verhindert Verzerrungen im Hochformat */
+        object-position: center 25% !important; /* Zentriert horizontal, schiebt den vertikalen Fokus leicht hoch fürs Murmeltier-Gesicht */
+    }
+
+    /* --- 5b. NEWSLETTER HERO MOBIL FALLBACK --- */
+    .newsletter-hero {
+        display: flex !important;
+        flex-direction: column !important;
+        border-radius: 12px !important;
+        width: 100% !important;
+    }
+    .newsletter-hero-content {
+        position: relative !important;
+        background: #1c1c1e !important; 
+        padding: 30px 20px !important;
+        align-items: center !important;
+        text-align: center !important;
+        height: auto !important;
+        width: 100% !important;
+    }
+    .newsletter-hero-content h2 { font-size: 24px !important; }
+    .newsletter-hero-content p { font-size: 15px !important; }
+    .btn-subscribe { width: 100% !important; text-align: center !important; }
+
+    /* --- 6. CALL TO ACTION SECTION MOBIL --- */
+    .final-cta-section {
+        padding: 40px 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    .final-cta-section h2 {
+        font-size: 20px !important;
+    }
+    .cta-buy-button {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 14px 20px !important;
+        font-size: 16px !important;
+    }
+
+    /* --- 7. FOOTER --- */
+    .main-footer { 
+        padding: 40px 15px 0 15px !important; 
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    .footer-content { 
+        display: flex !important; 
+        flex-direction: column !important; 
+        align-items: center !important; 
+    }
+    .footer-links-grid { 
+        display: flex !important; 
+        flex-direction: column !important; 
+        width: 100% !important; 
+        gap: 35px !important; 
+        margin-top: 30px !important; 
+    }
+    .footer-col { 
+        width: 100% !important; 
+        max-width: 100% !important; 
+        text-align: center !important; 
+    }
+    .footer-col ul { 
+        display: flex !important; 
+        flex-direction: column !important; 
+        align-items: center !important; 
+        padding: 0 !important; 
+    }
+    .footer-col ul li { 
+        width: 100% !important; 
+        margin-bottom: 12px !important; 
+        padding: 0 !important; 
+    }
+    .app-buttons { 
+        display: flex !important; 
+        flex-direction: column !important; 
+        align-items: center !important; 
+        gap: 15px !important; 
+    }
+    .app-btn { 
+        width: 200px !important; 
+        justify-content: center !important; 
+    }
+    .footer-bottom {
+        margin: 40px -15px 0 -15px !important;
+        padding: 20px 15px !important;
+    }
+    .footer-bottom-links { 
+        display: flex !important; 
+        flex-direction: column !important; 
+        align-items: center !important; 
+        gap: 12px !important; 
+        text-align: center !important; 
+    }
+/* --- 8. KAUFBEREICH & PRODUKT-INFO FIX (Stapelung & Reihenfolge) --- */
+.product-main-info {
+    display: flex !important;
+    flex-direction: column !important; 
+    /* Schaltet das Desktop-Raster auf dem Smartphone ab */
+    grid-template-areas: none !important; 
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 15px !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+}
+
+/* Mobil: 1. Der Titel steht ganz oben */
+.product-main-title {
+    order: 1 !important;
+    font-size: 26px !important;
+    margin-bottom: 10px !important;
+    text-align: left !important;
+    width: 100% !important;
+}
+
+/* Mobil: 2. Das Bild folgt direkt darunter */
+.detail-image-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    flex: none !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    padding: 0px !important;
+    order: 2 !important; 
+    margin-bottom: 15px !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.detail-image-box img.carousel-slide {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 380px !important; 
+    object-fit: contain !important;
+    margin: 0 auto !important;
+}
+
+/* Mobil: 3. Beschreibung, Preis und Buttons rutschen unter das Bild */
+.purchase-box {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    order: 3 !important; 
+}
+
+/* Korrigiert auf das p-Tag aus deinem HTML */
+.purchase-box p {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 15px !important;
+}
+
+.purchase-box .stars {
+    margin-bottom: 15px !important;
+}
+
+.purchase-box .price {
+    font-size: 22px !important;
+    font-weight: bold !important;
+    margin-bottom: 20px !important;
+}
+
+/* Selektoren für die Buttons angepasst, damit auch .btn-red sicher erwischt wird */
+.purchase-box .btn, .purchase-box .btn-red, .purchase-box button, .purchase-box input, .purchase-box .buy-actions, .purchase-box .dropdown-select {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+    /* --- 9. TEXTE & PRODUKTINFORMATIONEN --- */
+    .info-text-section {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px 0 !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important; 
+    }
+
+    .purchase-box p,
+    .info-text-section p, 
+    .info-text-section li {
+        width: 100% !important;
+        max-width: 100% !important;
+        white-space: normal !important; 
+        word-wrap: break-word !important; 
+        font-size: 14px !important; 
+        line-height: 1.4 !important; 
+    }
+
+    .product-middle-image, .graphic-image-container img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin: 20px 0 !important;
+    }
+
+    /* --- 10. STARTSEITE: GRID COPIES --- */
+    .product-grid, .products-grid, [class*="grid"] {
+        display: flex !important;
+        flex-direction: column !important; 
+        align-items: center !important;
+        width: 100% !important;
+        gap: 30px !important; 
+        padding: 20px 0 !important;
+    }
+
+    .product-card {
+        width: 100% !important;
+        max-width: 340px !important; 
+        height: auto !important; 
+        margin: 0 auto !important;
+        padding: 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* --- 11. SCHWEBENDES MENÜ OVERLAY (Absolut ruckelfreier App-Vorhang) --- */
+    .mobile-menu-overlay {
+        position: fixed; /* Nutzt fixierte statt absolute Positionierung, um über der Seite zu schweben */
+        top: 60px; /* Dockt exakt unterhalb der Navigationsleiste an */
+        left: -100%; /* Startet unsichtbar außerhalb der linken Displaykante */
+        width: 100%;
+        height: calc(100vh - 60px); /* Nimmt dynamisch den kompletten Rest-Bildschirm ein */
+        background-color: #ff0000; 
+        transition: left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 999; /* Schiebt das Overlay sicher über Videos und Verkaufsboxen */
+        padding: 30px 20px;
+        box-sizing: border-box;
+        display: block !important; /* Überschreibt das allgemeine Display: none */
+    }
+
+    /* Sichtbarer Zustand gesteuert via JavaScript Klasse */
+    .mobile-menu-overlay.is-active {
+        left: 0; /* Slidet sanft in den sichtbaren Bildschirmbereich */
+    }
+
+    .mobile-nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .mobile-nav-links a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 500;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Mobiler Banking-Button im Vorhang */
+    .banking-btn-mobile {
+        background-color: #ffffff;
+        color: #ff0000;
+        border: none;
+        padding: 15px 35px;
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%;
+        max-width: 280px;
+        margin-top: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: transform 0.1s ease;
+    }
+
+    .banking-btn-mobile:active {
+        transform: scale(0.98);
+    }
+
+    /* Burger-Button-Transformation zu einem 'X' bei Aktivierung */
+    .burger-menu-btn.is-active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    .burger-menu-btn.is-active span:nth-child(2) {
+        opacity: 0;
+    }
+    .burger-menu-btn.is-active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+    .burger-menu-btn span {
+        transition: all 0.25s ease-in-out; /* Flüssige X-Transformation */
+    }
+}

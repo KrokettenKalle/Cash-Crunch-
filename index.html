@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparkasse - Cash Crunch</title>
+    <link rel="stylesheet" href="style.css?v=1.2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-top">
+            <div class="top-left">
+                <a href="#" class="active-pill">Privatkunden</a>
+                <a href="#">Firmenkunden</a>
+                <a href="#">Immobilien</a>
+            </div>
+            <div class="top-right">
+                <a href="#"><i class="fa-solid fa-book-open"></i> Leichte Sprache</a>
+                <a href="#"><i class="fa-solid fa-universal-access"></i> Barrierefreiheit</a>
+            </div>
+        </div>
+        
+        <div class="header-bottom">
+            <a href="index.html" class="logo-wrapper">
+                <img src="Bilder/logo.png" alt="Cash Crunch Logo" class="logo-img">
+                <span class="brand-name">Cash Crunch</span>
+            </a>
+        
+            <nav class="main-nav">
+                <a href="#">Produkte</a>
+                <a href="#">Ratgeber</a>
+                <a href="#">Aktuelles</a>
+                <a href="#">Über uns</a>
+                <a href="#">Karriere</a>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                
+                <a href="#" class="cart-btn-header" aria-label="Warenkorb">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge" id="cart-badge" style="display: none;">0</span>
+                </a>
+            
+                <button class="banking-btn-rounded">
+                    Online-Banking <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
+
+                <button class="burger-menu-btn" id="burgerMenuBtn" aria-label="Menü öffnen">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+            <nav class="mobile-nav-links">
+                <a href="#">Produkte</a>
+                <a href="#">Ratgeber</a>
+                <a href="#">Aktuelles</a>
+                <a href="#">Über uns</a>
+                <a href="#">Karriere</a>
+                
+                <button class="banking-btn-mobile">Online-Banking</button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-card">
+            <h1>Starte reich in den Tag. <br>Mit Cash Crunch.</h1>
+            <p>Zum Frühstück: einfach und gesund.</p>
+            <button class="btn-red" id="hero-btn">Jetzt unter Produkten entdecken &rarr;</button>
+        </div>
+    </section>
+
+    <main class="content-container">
+        <h2>Unsere Topprodukte</h2>
+
+        <hr class="section-divider2">
+
+        <div class="products-grid">
+            <a href="produkt-klassisch.html" class="product-link">
+                <div class="product-card">
+                    <div class="product-image-placeholder">
+                        <img src="Bilder/Verpackung-Klassisch.png" alt="Cash Crunch Klassisch" class="product-grid-img">
+                    </div>
+                    <h3>Klassisch</h3>
+                    <p class="description">
+                        Die krisensichere Anlage für dein Frühstück. Goldgelbe Honig-Münzen und knackige Vollkornscheine direkt aus Montys Geschmackstresor.
+                    </p>
+                    <h4>Vorteile:</h4>
+                    <ul>
+                        <li>Hohe Nährstoff-Rendite</li>
+                        <li>Optimale Liquidität</li>
+                        <li>Schutz vor dem Mittags-Dispo</li>
+                    </ul>
+                </div>
+            </a>
+        
+            <a href="produkt-sport.html" class="product-link">
+                <div class="product-card">
+                    <div class="product-image-placeholder">
+                        <img src="Bilder/Verpackung-Sport.png" alt="Cash Crunch Sport Edition" class="product-grid-img">
+                    </div>
+                    <h3>Fitness Edition</h3>
+                    <p class="description">
+                        Maximale Performance komplett ohne Strafzinsen für die Figur. Die perfekte Proteinkombination für ein stabiles Muskel-Wachstum.
+                    </p>
+                    <h4>Vorteile:</h4>
+                    <ul>
+                        <li>Maximaler Muskel-Zuwachs</li>
+                        <li>Geringe Zucker-Volatilität</li>
+                        <li>Mikronährstoff-Absicherung</li>
+                    </ul>
+                </div>
+            </a>
+        
+            <a href="produkt-kinder.html" class="product-link">
+                <div class="product-card">
+                    <div class="product-image-placeholder">
+                        <img src="Bilder/Verpackung-Kinder.png" alt="Cash Crunch Kinder Edition" class="product-grid-img">
+                    </div>
+                    <h3>Kinder Edition</h3>
+                    <p class="description">
+                        Spielerischer Investitionsschutz für die große Pause. Knusperspaß mit wertvollen Vitamin-Zuschüssen für smarte Köpfchen.
+                    </p>
+                    <h4>Vorteile:</h4>
+                    <ul>
+                        <li>Reichtums-Bauspielzeug</li>
+                        <li>Fruchtige Zuschuss-Linsen</li>
+                        <li>Konzentrations-Kredit</li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+
+        <hr class="section-divider">
+
+        <section class="newsletter-hero">
+            <img src="Bilder/Newsletter.png" alt="Cash Crunch Newsletter" class="newsletter-hero-img">
+            
+            <div class="newsletter-hero-content">
+                <h2>Newsletter abonnieren</h2>
+                <p>Verpasse keine krisensicheren Angebote mehr!</p>
+                <a href="#" class="btn-subscribe">Jetzt abonnieren</a>
+            </div>
+        </section>
+    </main>
+
+    <hr class="section-divider1">
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+
+            <div class="footer-links-grid">
+                <div class="footer-col">
+                    <h4>Beliebte Themen</h4>
+                    <ul>
+                        <li><a href="#">Girokonto &rarr;</a></li>
+                        <li><a href="#">Kontowechselservice &rarr;</a></li>
+                        <li><a href="#">Privatkredit &rarr;</a></li>
+                        <li><a href="#">Baufinanzierung &rarr;</a></li>
+                        <li><a href="#">Kreditkarte &rarr;</a></li>
+                        <li><a href="#">Wertpapiere &rarr;</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Filialen &rarr;</a></li>
+                        <li><a href="#">Geldautomaten &rarr;</a></li>
+                        <li><a href="#">Rechner &rarr;</a></li>
+                        <li><a href="#">Karte sperren &rarr;</a></li>
+                        <li><a href="#">Finanzglossar &rarr;</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Weitere Portale</h4>
+                    <ul>
+                        <li><a href="#">S-Immobilien &rarr;</a></li>
+                        <li><a href="#">WirWunder &rarr;</a></li>
+                        <li><a href="#">LBS &rarr;</a></li>
+                        <li><a href="#">Deka &rarr;</a></li>
+                        <li><a href="#">Jobbörse &rarr;</a></li>
+                        <li><a href="#">Cockpit Immobilie &rarr;</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Apps der Sparkasse</h4>
+                    <div class="app-buttons">
+                        <a href="#" class="app-btn"><i class="fa-brands fa-apple"></i> Laden im App Store</a>
+                        <a href="#" class="app-btn"><i class="fa-brands fa-google-play"></i> JETZT BEI Google Play</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="#">Datenschutzerklärung</a>
+            <a href="#">Impressum</a>
+            <a href="#">Nutzungshinweise</a>
+            <a href="#">Privatsphäre-Einstellungen</a>
+            <a href="#">Barrierefreiheit</a>
+            <a href="#">Barriere melden</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
