@@ -75,12 +75,21 @@
         </div>
     </header>
 
-    <section class="hero-section">
-        <div class="hero-card">
+    <section class="video-hero-teaser">
+        <video autoplay muted loop playsinline id="hero-video">
+            <source src="Bilder/Startseite.mp4" type="video/mp4">
+            Ihr Browser unterstützt das Video-Tag nicht.
+        </video>
+
+        <div class="hero-card" style="position: relative; z-index: 2;">
             <h1>Starte reich in den Tag. <br>Mit Cash Crunch.</h1>
             <p>Zum Frühstück: einfach und gesund.</p>
             <button class="btn-red" id="hero-btn">Jetzt unter Produkten entdecken &rarr;</button>
         </div>
+
+        <button class="video-control-btn" id="video-toggle-btn" aria-label="Video pausieren">
+            <i class="fa-solid fa-pause"></i>
+        </button>
     </section>
 
     <main class="content-container">

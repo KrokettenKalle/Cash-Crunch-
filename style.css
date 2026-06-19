@@ -3,10 +3,10 @@
    ========================================================================== */
 
    html {
-    scroll-behavior: smooth; /* Aktiviert das flüssige, animierte Scrollen */
+    scroll-behavior: smooth; 
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden; /* Verhindert globalen horizontalen Overflow */
+    overflow-x: hidden; 
 }
 
 * {
@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #ffffff;
     width: 100%;
     display: block;
-    position: relative; /* Basis für absolute Positionierungen */
+    position: relative; 
 }
 
 /* Oberer Header-Streifen */
@@ -179,12 +179,12 @@ h1, h2, h3, h4, h5, h6 {
     color: #ff0000;
 }
 
-/* Burger-Button (Standardmäßig auf Desktop versteckt) */
+
 .burger-menu-btn {
     display: none;
 }
 
-/* Mobiles Overlay standardmäßig im Desktop ausblenden */
+
 .mobile-menu-overlay {
     display: none;
 }
@@ -201,12 +201,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-card {
-    background-color: #ffffff;
-    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(0px); 
+    padding: 20px 25px;         
     width: 100%;
-    max-width: 420px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 360px;           
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
     border-radius: 4px;
+    position: relative;
+    z-index: 2;
+    margin-left: 8%;            
+    margin-bottom: 100px;        
 }
 
 .hero-card h1 {
@@ -244,8 +249,11 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #000000;
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    
+
+    align-items: flex-end;       
+    justify-content: flex-start;
+    
     overflow: hidden;
     flex-shrink: 0; 
 }
@@ -257,6 +265,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     object-fit: cover; 
+    z-index: 1;
 }
 
 /* ==========================================================================
@@ -343,23 +352,23 @@ a.product-link:hover .product-card {
    ========================================================================== */
    .product-image-placeholder {
     width: 100%;
-    height: auto;                     /* Hebt die harte 280px Begrenzung auf */
-    min-height: 320px;                /* Sorgt für eine einheitliche Mindesthöhe im Grid */
-    background-color: transparent;    /* Killt den grauen Kasten-Hintergrund */
-    border: none;                     /* Entfernt den grauen Rahmen um das Bild */
+    height: auto;                     
+    min-height: 320px;                
+    background-color: transparent;    
+    border: none;                     
     border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px;                     /* Weniger Abstand = Mehr Platz für das Bild */
+    padding: 5px;                     
     overflow: hidden;
 }
 
 .product-grid-img {
-    width: 100%;                      /* Zwingt das Bild, den Platz voll auszunutzen */
+    width: 100%;                      
     max-width: 100%;
-    height: auto;                     /* Verhindert Verzerrungen */
-    max-height: 340px;                /* Macht das Bild optisch deutlich größer als vorher */
+    height: auto;                     
+    max-height: 340px;                
     object-fit: contain; 
     filter: drop-shadow(3px 5px 8px rgba(0,0,0,0.15)); 
     transition: transform 0.2s ease;
@@ -455,48 +464,48 @@ a.product-link:hover .product-grid-img {
     margin-bottom: 10px;
 }
 
-/* Das Grid ordnet Titel und Kauf-Box sauber in der rechten Spalte an */
+
 .product-main-info {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
     grid-template-areas: 
         "image title"
         "image purchase" !important;
-    gap: 25px !important;       /* Abstand zwischen linker und rechter Spalte verringert */
+    gap: 25px !important;       
     align-items: start !important;
-    margin-top: 0px !important;  /* HIER: Verringert den Abstand nach oben zum Video-Teaser */
+    margin-top: 0px !important; 
     margin-bottom: 50px !important; 
     width: 100% !important;
 }
 
-/* Die neue Überschrift wird der oberen rechten Spalte zugewiesen */
+
 .product-main-title {
     grid-area: title;
     font-size: 28px;
     font-weight: bold;
     color: #000;
-    margin-top: 30px;          /* HIER: Startet jetzt direkt oben bündig mit dem Bild */
-    margin-bottom: 0px;        /* HIER: Kleiner, sauberer Abstand zur darunterliegenden Kauf-Box */
+    margin-top: 30px;         
+    margin-bottom: 0px;       
     line-height: 1.2;
 }
 
-/* Das Bild bleibt fest in der linken Spalte verankert */
+
 .detail-image-box {
     grid-area: image;
     position: relative; 
-    background: transparent !important; /* Entfernt die graue Box überall */
+    background: transparent !important; 
     height: 450px; 
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 0;                   /* Kein abgerundeter Rahmen mehr nötig */
-    border: none !important;            /* Entfernt die dünne graue Außenlinie */
-    box-shadow: none !important;        /* Entfernt den Schatten der Box */
+    border-radius: 0;                   
+    border: none !important;            
+    box-shadow: none !important;        
     padding: 20px;
     overflow: hidden;
 }
 
-/* Die Kaufbox mit Beschreibungen und Buttons zieht in die untere rechte Spalte */
+
 .purchase-box {
     grid-area: purchase;
     display: flex;
@@ -583,7 +592,7 @@ a.product-link:hover .product-grid-img {
     transform: scale(1.2);
 }
 
-/* Kauf-Box Detail-Stylings */
+
 .purchase-box .stars { color: #ff0000; font-size: 18px; margin-bottom: 15px; }
 .purchase-box .price { font-size: 22px; font-weight: bold; margin-bottom: 20px; }
 .purchase-box .price-sub { font-size: 12px; color: #666; font-weight: normal; }
@@ -823,7 +832,7 @@ a.product-link:hover .product-grid-img {
     transition: opacity 0.2s;
 }
 
-/* Umbau auf Flexbox zur Vermeidung von table-collapse Overflows */
+
 .footer-links-grid {
     display: flex;
     justify-content: space-between;
@@ -874,7 +883,7 @@ a.product-link:hover .product-grid-img {
 
 .footer-bottom {
     background-color: #000000; 
-    margin: 50px -5.6% 0 -5.6%; /* Korrigierter Einzug passend zum neuen Padding */
+    margin: 50px -5.6% 0 -5.6%; 
     padding: 20px 5.6%;
 }
 
@@ -985,7 +994,6 @@ body.no-scroll {
     overflow: hidden !important;
 }
 
-/* Gehört in den allgemeinen Desktop-Teil deiner CSS-Datei */
 .mobile-only-img {
     display: none;
 }
@@ -1042,7 +1050,7 @@ body.no-scroll {
         object-fit: contain !important;
     }
 
-    /* Blendet den Namen "Cash Crunch" im Header komplett aus */
+    
     .brand-name {
         display: none !important;
     }
@@ -1051,7 +1059,7 @@ body.no-scroll {
         display: none !important;
     }
 
-    /* Rechte Aktionsbox: Perfekte Abstände für Suche, Warenkorb und Burger-Icon */
+    
     .header-actions {
         display: flex !important;
         flex-direction: row !important;
@@ -1067,7 +1075,7 @@ body.no-scroll {
         color: #ffffff !important;
     }
 
-    /* Komplettes Ausblenden des Online-Banking-Buttons im Header */
+    
     .banking-btn-rounded {
         display: none !important;
     }
@@ -1079,7 +1087,7 @@ body.no-scroll {
         padding: 2px 5px !important;
     }
 
-    /* Burger Menü Button wird rechts bündig fixiert */
+    
     .burger-menu-btn {
         display: flex !important; 
         flex-direction: column !important;
@@ -1232,91 +1240,57 @@ body.no-scroll {
         text-align: center !important; 
     }
 
-    /* --- 8. KAUFBEREICH & PRODUKT-INFO FIX (Stapelung & Reihenfolge) --- */
-    .product-main-info {
-        display: flex !important;
-        flex-direction: column !important; 
-        grid-template-areas: none !important; 
-        grid-template-columns: none !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        gap: 15px !important;
-        height: auto !important;
-        box-sizing: border-box !important;
-    }
+   /* --- 8. KAUFBEREICH & PRODUKT-INFO FIX (Stapelung & Reihenfolge) --- */
+   .product-main-info {
+    display: flex !important;
+    flex-direction: column !important; 
+    grid-template-areas: none !important; 
+    grid-template-columns: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 15px !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+}
 
-    /* Mobil: 1. Der Titel steht ganz oben */
-    .product-main-title {
-        order: 1 !important;
-        font-size: 26px !important;
-        margin-top: 10px !important;
-        margin-bottom: 15px !important;
-        text-align: left !important;
-        width: 100% !important;
-    }
+/* 1. Der Titel soll ganz oben stehen */
+.product-main-title {
+    order: 1 !important; /* Erste Position */
+    font-size: 26px !important;
+    margin-top: 10px !important;
+    margin-bottom: 5px !important;
+    text-align: left !important;
+    width: 100% !important;
+}
 
-    /* Mobil: 2. Das Bild folgt direkt darunter */
-    .detail-image-box {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important; 
-        min-height: unset !important;
-        flex: none !important;
-        box-sizing: border-box !important;
-        text-align: center !important;
-        padding: 0px !important;
-        order: 2 !important; 
-        margin-bottom: 15px !important;
-        background: transparent !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
+/* 2. Das Bild kommt direkt unter den Titel */
+.detail-image-box {
+    order: 2 !important; /* Zweite Position */
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important; 
+    min-height: unset !important;
+    flex: none !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    padding: 0px !important;
+    margin-bottom: 15px !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
 
-    .detail-image-box .carousel-slides {
-        height: auto !important;
-    }
-
-    .detail-image-box img.carousel-slide {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        max-height: 380px !important; 
-        object-fit: contain !important;
-        margin: 0 auto !important;
-    }
-
-    /* Mobil: 3. Beschreibung, Preis und Buttons rutschen unter das Bild */
-    .purchase-box {
-        display: flex !important;
-        flex-direction: column !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: none !important;
-        padding: 0 !important;
-        box-sizing: border-box !important;
-    }
-
-    .purchase-box p {
-        font-size: 14px !important;
-        line-height: 1.5 !important;
-        margin-bottom: 15px !important;
-    }
-
-    .purchase-box .stars {
-        margin-bottom: 15px !important;
-    }
-
-    .purchase-box .price {
-        font-size: 22px !important;
-        font-weight: bold !important;
-        margin-bottom: 20px !important;
-    }
-
-    .purchase-box .btn, .purchase-box .btn-red, .purchase-box button, .purchase-box input, .purchase-box .buy-actions, .purchase-box .dropdown-select {
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-    }
+/* 3. Die Kaufbox mit Preis, Sternen und Button kommt darunter */
+.purchase-box {
+    order: 3 !important; /* Dritte Position - wandert nach unten! */
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
 
     /* --- 9. TEXTE & PRODUKTINFORMATIONEN --- */
     .info-text-section {
@@ -1338,7 +1312,7 @@ body.no-scroll {
         line-height: 1.4 !important; 
     }
 
-    /* FIX: Tauscht das Werbebanner im mobilen Viewport aus und verhindert Verzerrung */
+    
     .desktop-only-img {
         display: none !important;
     }
@@ -1417,7 +1391,7 @@ body.no-scroll {
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    /* Styling für die Pill-Buttons (Privatkunden etc.) im mobilen Menü */
+    
     .mobile-nav-links .active-pill {
         background-color: #ffffff !important;
         color: #ff0000 !important;
@@ -1427,7 +1401,7 @@ body.no-scroll {
         border-bottom: none !important;
     }
 
-    /* Feine Extra-Trennlinie zwischen den Zielgruppen-Links und den Produkt-Links */
+    
     .mobile-menu-divider {
         border: none !important;
         border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
@@ -1468,7 +1442,7 @@ body.no-scroll {
         transition: all 0.25s ease-in-out; 
     }
 
-    /* --- NUTRI-PERFORMANCE FULL WIDTH FIX --- */
+    
     .nutri-performance-container {
         width: auto !important;
         margin-left: -5.6% !important; 
@@ -1508,5 +1482,31 @@ body.no-scroll {
         width: 100% !important;
         height: auto !important;
         max-height: 260px !important;  
+    }
+
+    /* Verwandelt die weiße Card in einen unsichtbaren Container */
+    .hero-card {
+        background-color: transparent !important;
+        background: none !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 90% !important;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Versteckt die Texte (H1 und P) radikal nur auf dem Smartphone */
+    .hero-card h1, 
+    .hero-card p {
+        display: none !important;
+    }
+
+    /* Macht den roten Button knackig, kompakt und zentriert ihn */
+    .hero-card .btn-red {
+      
+        display:none !important;
     }
 }
